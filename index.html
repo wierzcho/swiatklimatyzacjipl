@@ -13,7 +13,7 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://assets.calendly.com">
+
 
     <!-- Fonts - async loaded -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -22,29 +22,6 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.min.css">
 
-    <!-- Calendly - lazy loaded -->
-    <script>
-        function loadCalendly() {
-            if (!window.calendlyLoaded) {
-                var s = document.createElement('script');
-                s.src = 'https://assets.calendly.com/assets/external/widget.js';
-                s.async = true;
-                document.body.appendChild(s);
-                window.calendlyLoaded = true;
-            }
-        }
-        // Load when user scrolls near contact section
-        var calendlyObserver = new IntersectionObserver(function(entries) {
-            if (entries[0].isIntersecting) {
-                loadCalendly();
-                calendlyObserver.disconnect();
-            }
-        }, {rootMargin: '200px'});
-        document.addEventListener('DOMContentLoaded', function() {
-            var contactSection = document.getElementById('rezerwacja');
-            if (contactSection) calendlyObserver.observe(contactSection);
-        });
-    </script>
 </head>
 <body>
     <!-- HEADER & NAVIGATION -->
@@ -96,7 +73,8 @@
     <section class="hero-contact-section">
         <div class="container">
             <div class="contact-bar-wrapper">
-                <form id="heroContactForm" class="hero-contact-bar">
+                <!-- TODO: Connect hero form to a real backend/email service before uncommenting -->
+                <!-- <form id="heroContactForm" class="hero-contact-bar">
                     <div class="hero-input-group">
                         <input type="text" name="name" placeholder="Imię" required aria-label="Imię">
                     </div>
@@ -115,7 +93,7 @@
                     </div>
 
                     <button type="submit" class="btn-hero-submit">WYŚLIJ</button>
-                </form>
+                </form> -->
                 <div id="heroFormMessage" class="hero-form-message"></div>
             </div>
         </div>
@@ -755,48 +733,19 @@
             </div>
 
             <div class="unified-contact-grid">
-                <!-- Left Column: Calendly -->
                 <div class="contact-column">
                     <div class="contact-box">
-                        <h3>Umów bezpłatny audyt online</h3>
-                        <p>Wybierz dogodny termin w kalendarzu. To najszybszy sposób na rezerwację wizyty.</p>
-                        <div class="calendly-wrapper-inner">
-                            <div class="calendly-inline-widget" data-url="https://calendly.com/jjoxxwiak/bezplatny-audyt-montazu?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2563eb"></div>
-                        </div>
+                        <h3>Zadzwoń do nas</h3>
+                        <p>Porozmawiaj z naszym specjalistą. Chętnie odpowiemy na wszystkie pytania.</p>
+                        <a href="tel:+48729870000" class="contact-link contact-phone">+48 729 870 000</a>
                     </div>
                 </div>
 
-                <!-- Right Column: Contact Form -->
                 <div class="contact-column">
                     <div class="contact-box">
-                        <h3>Lub napisz do nas</h3>
-                        <p>Masz pytania lub wolisz kontakt mailowy? Wypełnij formularz, a my odezwiemy się do Ciebie.</p>
-                        <form class="contact-form-unified" id="contactForm" aria-label="Formularz kontaktowy">
-                            <div class="form-group">
-                                <label for="name">Imię i nazwisko *</label>
-                                <input type="text" id="name" name="name" required aria-required="true" placeholder="Jan Kowalski">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required aria-required="true" placeholder="jan@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Telefon</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Wiadomość *</label>
-                                <textarea id="message" name="message" required aria-required="true" placeholder="Opisz krótko swoją potrzebę..."></textarea>
-                            </div>
-                            <div class="form-group rodo-group">
-                                <label class="rodo-label">
-                                    <input type="checkbox" name="rodo" required aria-required="true">
-                                    <span>Wyrażam zgodę na kontakt telefoniczny w celu przedstawienia oferty oraz na otrzymywanie informacji marketingowych. ( <a href="regulamin.html" target="_blank">Regulamin</a> / <a href="polityka-prywatnosci.html" target="_blank">Polityka Prywatności</a> )</span>
-                                </label>
-                            </div>
-                            <button type="submit" class="form-submit">Wyślij wiadomość</button>
-                            <div class="form-message" id="formMessage" role="alert"></div>
-                        </form>
+                        <h3>Napisz do nas</h3>
+                        <p>Masz pytania lub wolisz kontakt mailowy? Napisz, a my odezwiemy się do Ciebie.</p>
+                        <a href="mailto:kontakt@swiatklimatyzacji.pl" class="contact-link contact-email">kontakt@swiatklimatyzacji.pl</a>
                     </div>
                 </div>
             </div>
@@ -884,16 +833,7 @@
         <span class="phone-number">729 870 000</span>
     </a>
 
-    <!-- LIVE VIEWERS COUNTER -->
-    <div class="live-viewers">
-        <div class="live-viewers-indicator"></div>
-        <div class="live-viewers-content">
-            <span class="live-viewers-icon">👁️</span>
-            <span class="live-viewers-text">
-                <span class="live-viewers-count" id="viewersCount">8</span> osób ogląda <strong>Pakiety cenowe</strong>
-            </span>
-        </div>
-    </div>
+    <!-- LIVE VIEWERS COUNTER - REMOVED -->
 
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookieBanner">

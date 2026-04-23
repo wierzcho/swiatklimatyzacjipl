@@ -1176,21 +1176,17 @@ a {
     margin-bottom: 2rem;
 }
 
-.calendly-wrapper-inner {
-    flex-grow: 1;
-    border-radius: 12px;
-    overflow: hidden;
+.contact-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-navy-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.calendly-inline-widget {
-    height: 100%;
-    min-height: 650px;
-}
-
-.contact-form-unified {
-    flex-grow: 1; /* Make form fill column height */
-    display: flex;
-    flex-direction: column;
+.contact-link:hover {
+    color: var(--color-blue-primary);
 }
 
 .contact-form-unified .form-group:has(textarea) {

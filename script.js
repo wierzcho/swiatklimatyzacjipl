@@ -132,40 +132,8 @@ faqQuestions.forEach(question => {
     });
 });
 
-// ============================================
-// CONTACT FORM HANDLING
-// ============================================
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-if (contactForm && formMessage) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const submitBtn = contactForm.querySelector('.form-submit');
-        if (!submitBtn) return;
-
-        submitBtn.classList.add('loading');
-        submitBtn.textContent = 'Wysyłanie...';
-        submitBtn.disabled = true;
-
-        setTimeout(() => {
-            formMessage.textContent = 'Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.';
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
-
-            contactForm.reset();
-
-            submitBtn.classList.remove('loading');
-            submitBtn.textContent = 'Wyślij wiadomość';
-            submitBtn.disabled = false;
-
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        }, 1500);
-    });
-}
+// TODO: Connect contact form to a real backend/email service
+// CONTACT FORM HANDLING - DISABLED
 
 // ============================================
 // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
@@ -220,36 +188,4 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 console.log('%c✨ ŚWIAT KLIMATYZACJI', 'color: #00bcd4; font-size: 24px; font-weight: bold; font-family: serif;');
 console.log('%cPerfekcyjny klimat, profesjonalna obsługa', 'color: #1a2b5f; font-size: 14px;');
 
-// ============================================
-// LIVE VIEWERS COUNTER - DYNAMIC UPDATE
-// ============================================
-const viewersCountElement = document.getElementById('viewersCount');
-
-if (viewersCountElement) {
-    const viewerNumbers = [5, 8, 9, 10, 12, 7, 6, 11, 8, 9];
-    let currentIndex = 0;
-
-    function updateViewersCount() {
-        const nextCount = viewerNumbers[currentIndex];
-        viewersCountElement.style.transform = 'scale(0.8)';
-        viewersCountElement.style.opacity = '0.5';
-
-        setTimeout(() => {
-            viewersCountElement.textContent = nextCount;
-            viewersCountElement.style.transform = 'scale(1)';
-            viewersCountElement.style.opacity = '1';
-        }, 150);
-
-        currentIndex = (currentIndex + 1) % viewerNumbers.length;
-    }
-
-    function scheduleNextUpdate() {
-        const randomDelay = Math.floor(Math.random() * 4000) + 6000;
-        setTimeout(() => {
-            updateViewersCount();
-            scheduleNextUpdate();
-        }, randomDelay);
-    }
-
-    scheduleNextUpdate();
-}
+// LIVE VIEWERS COUNTER - REMOVED
