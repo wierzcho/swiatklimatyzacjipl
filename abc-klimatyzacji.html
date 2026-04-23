@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABC Klimatyzacji - Kompleksowy przewodnik po klimatyzacji dla klientów końcowych. Dowiedz się wszystkiego o wyborze, montażu i eksploatacji klimatyzacji.">
+    <meta name="keywords" content="klimatyzacja, poradnik klimatyzacji, jak wybrać klimatyzację, montaż klimatyzacji, serwis klimatyzacji, rodzaje klimatyzacji">
+    <title>ABC Klimatyzacji – Kompletny Przewodnik | ŚWIAT KLIMATYZACJI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Calendly widget script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- Schema.org structured data for AI/LLM -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "ABC Klimatyzacji - Kompletny Przewodnik",
+        "description": "Kompleksowy przewodnik po klimatyzacji dla klientów końcowych",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ŚWIAT KLIMATYZACJI"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "Klimatyzacja"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-navy-dark: #0f1a3d;
+            --color-navy-primary: #1a2b5f;
+            --color-primary-dark: #1e3a8a;
+            --color-primary: #2563eb;
+            --color-blue-bright: #00bcd4;
+            --color-orange: #ff8c42;
+            --color-orange-dark: #f57c00;
+            --color-white: #ffffff;
+            --color-gray-50: #f9fafb;
+            --color-gray-600: #6b7280;
+            --color-gray-900: #111827;
+            --font-serif: 'Cormorant', Georgia, serif;
+            --font-sans: 'Source Sans 3', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            color: var(--color-gray-900);
+            background-color: var(--color-white);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+            box-shadow: 0px 2px 8px rgba(26, 43, 95, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1340px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-navy-primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--color-orange);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem clamp(1.5rem, 5vw, 3.5rem) 3rem;
+            background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Articles Grid */
+        .articles-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem clamp(1.5rem, 5vw, 3.5rem);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .article-card {
+            background: var(--color-white);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 16px rgba(26, 43, 95, 0.08);
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 12px 32px rgba(37, 99, 235, 0.15);
+            border-color: var(--color-blue-bright);
+        }
+
+        .article-number {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-blue-bright) 100%);
+            color: var(--color-white);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-navy-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--color-gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--color-gray-600);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .read-more:hover {
+            color: var(--color-orange);
+            gap: 0.8rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-navy-dark);
+            color: rgba(255, 255, 255, 0.75);
+            padding: 3rem clamp(1.5rem, 5vw, 3.5rem) 2rem;
+            text-align: center;
+        }
+
+        /* ============================================
+           CALENDLY BOOKING SECTION
+           ============================================ */
+        .booking-section {
+            padding: 5rem clamp(1.5rem, 5vw, 3.5rem);
+            background-color: var(--color-white);
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .booking-header h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+            font-weight: 600;
+            color: var(--color-navy-primary);
+            margin-bottom: 1rem;
+        }
+
+        .booking-header p {
+            font-size: 1.075rem;
+            color: var(--color-gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .calendly-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-section {
+            padding: 5rem clamp(1.5rem, 5vw, 3.5rem);
+            background-color: var(--color-gray-50);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .faq-header h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 600;
+            color: var(--color-navy-primary);
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(0, 188, 212, 0.02) 100%);
+            border-left: 3px solid var(--color-blue-bright);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(0, 188, 212, 0.04) 100%);
+            border-left-color: var(--color-primary);
+            transform: translateX(4px);
+        }
+
+        .faq-item.active {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(0, 188, 212, 0.06) 100%);
+            border-left-color: var(--color-orange);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-sans);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-navy-primary);
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--color-primary);
+        }
+
+        .faq-icon {
+            min-width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-blue-bright) 100%);
+            color: var(--color-white);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.2rem 1.5rem;
+            margin: 0;
+            color: var(--color-gray-600);
+            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">ŚWIAT KLIMATYZACJI</a>
+            <a href="index.html" class="back-link">← Powrót do strony głównej</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>ABC Klimatyzacji</h1>
+        <p>Kompleksowy przewodnik dla klientów końcowych. Dowiedz się wszystkiego, co musisz wiedzieć o klimatyzacji – od wyboru przez montaż, aż po eksploatację i serwis.</p>
+    </section>
+
+    <!-- ARTICLES -->
+    <section class="articles-section">
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 1</div>
+                <div class="article-content">
+                    <h2 class="article-title">Jak wybrać klimatyzację do domu?</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 8 min</span>
+                        <span class="meta-badge">🎯 Podstawy</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Kompleksowy poradnik wyboru klimatyzacji dla domu. Rodzaje systemów, moc chłodnicza, efektywność energetyczna i ceny – wszystko czego potrzebujesz przed zakupem.
+                    </p>
+                    <a href="artykul-1-jak-wybrac-klimatyzacje.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 2</div>
+                <div class="article-content">
+                    <h2 class="article-title">Montaż klimatyzacji krok po kroku</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 10 min</span>
+                        <span class="meta-badge">🔧 Instalacja</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Proces montażu klimatyzacji od A do Z. Pozwolenia, przygotowania, etapy instalacji i odbiór techniczny – dowiedz się czego możesz się spodziewać.
+                    </p>
+                    <a href="artykul-2-montaz-klimatyzacji.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 3</div>
+                <div class="article-content">
+                    <h2 class="article-title">Koszty eksploatacji klimatyzacji</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 6 min</span>
+                        <span class="meta-badge">💰 Ekonomia</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Ile kosztuje utrzymanie klimatyzacji? Zużycie prądu, klasy energetyczne, tryby oszczędnościowe i realne koszty miesięczne na konkretnych przykładach.
+                    </p>
+                    <a href="artykul-3-koszty-eksploatacji.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 4</div>
+                <div class="article-content">
+                    <h2 class="article-title">Serwis i konserwacja klimatyzacji</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 7 min</span>
+                        <span class="meta-badge">🛠️ Serwis</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Jak dbać o klimatyzację, aby służyła latami? Czyszczenie filtrów, przeglądy techniczne, uzupełnianie czynnika i najczęstsze problemy z rozwiązaniami.
+                    </p>
+                    <a href="artykul-4-serwis-konserwacja.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 5</div>
+                <div class="article-content">
+                    <h2 class="article-title">Jak prawidłowo korzystać z klimatyzacji?</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 9 min</span>
+                        <span class="meta-badge">💡 Użytkowanie</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Praktyczne wskazówki efektywnego użytkowania klimatyzacji. Optymalna temperatura, kierunek nawiewu, oszczędzanie energii i najczęstsze błędy użytkowników.
+                    </p>
+                    <a href="artykul-5-jak-korzystac.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="article-card">
+                <div class="article-number">ARTYKUŁ 6</div>
+                <div class="article-content">
+                    <h2 class="article-title">Klimatyzatory Premium – za co płacimy?</h2>
+                    <div class="article-meta">
+                        <span class="meta-badge">📖 Czas czytania: 10 min</span>
+                        <span class="meta-badge">💎 Premium</span>
+                    </div>
+                    <p class="article-excerpt">
+                        Różnica między klimatyzacją za 3000 zł a 12000 zł. Technologie premium, materiały, cicha praca, design i długoterminowa opłacalność najdroższych modeli.
+                    </p>
+                    <a href="artykul-6-klimatyzatory-premium.html" class="read-more">
+                        Czytaj więcej →
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CALENDLY BOOKING SECTION -->
+    <section class="booking-section" id="rezerwacja">
+        <div class="booking-header">
+            <p style="font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #00bcd4; margin-bottom: 1rem;">Bezpłatna konsultacja</p>
+            <h2>Zarezerwuj bezpłatny audyt</h2>
+            <p>Wybierz dogodny termin dla bezpłatnego audytu montażu klimatyzacji w Twoim domu.</p>
+        </div>
+
+        <div class="calendly-wrapper">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/jjoxxwiak/bezplatny-audyt-montazu?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2563eb&embed_domain=localhost&embed_type=Inline" style="min-width:320px;height:700px;"></div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="faq-header">
+            <h2>FAQ - najczęściej zadawane pytania o klimatyzacji i montażu</h2>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Ile kosztuje montaż klimatyzacji?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Koszt montażu klimatyzacji zależy od wielu czynników: typu urządzenia, mocy, lokalizacji jednostek, długości instalacji oraz stopnia skomplikowania prac. Podczas bezpłatnego audytu dokładnie oceniamy Twoje potrzeby i przedstawiamy szczegółową wycenę. Zazwyczaj koszt kompletnej instalacji dla domu jednorodzinnego waha się od 8 000 do 15 000 zł, w zależności od wybranego systemu i zakresu prac.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jak długo trwa montaż klimatyzacji?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Standardowy montaż klimatyzacji typu split (jedna jednostka wewnętrzna + jedna zewnętrzna) zajmuje od 4 do 8 godzin. W przypadku systemów Multi Split lub bardziej zaawansowanych instalacji czas może wydłużyć się do 1-2 dni roboczych. Podczas audytu dokładnie określamy harmonogram prac dostosowany do Twojej sytuacji.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Czy klimatyzacja zużywa dużo prądu?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nowoczesne klimatyzatory klasy A+++ są bardzo energooszczędne. Średni koszt eksploatacji klimatyzacji w sezonie letnim to około 150-300 zł miesięcznie, w zależności od intensywności użytkowania i wielkości chłodzonego pomieszczenia. Systemy Inverter automatycznie dostosowują moc pracy do potrzeb, co znacząco obniża zużycie energii. Wiele urządzeń posiada również funkcję grzania, która w okresie przejściowym (wiosna/jesień) jest bardziej ekonomiczna niż tradycyjne ogrzewanie elektryczne.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Czy klimatyzacja wymaga konserwacji?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tak, regularna konserwacja jest kluczowa dla długiej żywotności i efektywnej pracy klimatyzacji. Zalecamy profesjonalny przegląd raz w roku (przed sezonem letnim). Obejmuje on czyszczenie filtrów i wymienników, sprawdzenie poziomu czynnika, kontrolę układu elektrycznego oraz wydajności systemu. Podstawowe czyszczenie filtrów możesz wykonywać samodzielnie co 2-3 tygodnie. Oferujemy pakiety serwisowe z regularną konserwacją.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Czy mogę zamontować klimatyzację samodzielnie?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Zdecydowanie odradzamy samodzielny montaż klimatyzacji. Instalacja wymaga specjalistycznego sprzętu (pompa próżniowa, manometry, detektor nieszczelności), wiedzy technicznej oraz uprawnień do pracy z czynnikami chłodniczymi. Nieprawidłowy montaż może prowadzić do uszkodzenia urządzenia, utraty gwarancji producenta, niskiej efektywności pracy i zwiększonego zużycia energii. Profesjonalny montaż zapewnia bezpieczeństwo, optymalną wydajność i 5-letnią gwarancję na instalację.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 ŚWIAT KLIMATYZACJI. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ============================================
+        // FAQ ACCORDION
+        // ============================================
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

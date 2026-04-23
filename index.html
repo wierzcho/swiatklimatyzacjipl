@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ŚWIAT KLIMATYZACJI - Profesjonalna instalacja systemów klimatyzacji premium. Daikin, Mitsubishi Electric, Toshiba. 15+ lat doświadczenia, 5 lat gwarancji.">
+    <meta name="keywords" content="klimatyzacja, Daikin, Mitsubishi Electric, Toshiba, instalacja klimatyzacji, serwis klimatyzacji, klimatyzacja premium">
+    <title>ŚWIAT KLIMATYZACJI – Instalacja Klimatyzacji Premium | Daikin, Mitsubishi, Toshiba</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com">
+
+    <!-- Fonts - async loaded -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.min.css">
+
+    <!-- Calendly - lazy loaded -->
+    <script>
+        function loadCalendly() {
+            if (!window.calendlyLoaded) {
+                var s = document.createElement('script');
+                s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                s.async = true;
+                document.body.appendChild(s);
+                window.calendlyLoaded = true;
+            }
+        }
+        // Load when user scrolls near contact section
+        var calendlyObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                loadCalendly();
+                calendlyObserver.disconnect();
+            }
+        }, {rootMargin: '200px'});
+        document.addEventListener('DOMContentLoaded', function() {
+            var contactSection = document.getElementById('rezerwacja');
+            if (contactSection) calendlyObserver.observe(contactSection);
+        });
+    </script>
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo" aria-label="Strona główna ŚWIAT KLIMATYZACJI">
+                <img src="logo-biale.png" alt="ŚWIAT KLIMATYZACJI Logo" class="header-logo" width="200" height="50">
+            </a>
+
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu nawigacyjne" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#korzysci">Korzyści</a></li>
+                <li><a href="#uslugi">Nasze usługi</a></li>
+                <li><a href="#marki">Marki</a></li>
+                <li><a href="#proces">Jak pracujemy?</a></li>
+                <li><a href="#cennik">Pakiety cenowe</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="abc-klimatyzacji.html">ABC Klimatyzacji</a></li>
+                <li><a href="#rezerwacja">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <video autoplay muted loop playsinline preload="metadata">
+                <source src="hero-background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Japońskie klimatyzatory premium</h1>
+            <p class="hero-subtitle">
+                Od ponad 10 lat tworzymy przestrzenie pełne spokoju i komfortu. Instalujemy wyłącznie najwyższej klasy systemy klimatyzacji renomowanych japońskich marek – Daikin, Mitsubishi Electric, Toshiba, Panasonic, Fujitsu i Hitachi – dbając o każdy detal od projektu po serwis.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#rezerwacja" class="btn btn-primary">Umów bezpłatną konsultację</a>
+                <a href="#proces" class="btn btn-secondary">Poznaj nasz proces</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BAR SECTION -->
+    <section class="hero-contact-section">
+        <div class="container">
+            <div class="contact-bar-wrapper">
+                <form id="heroContactForm" class="hero-contact-bar">
+                    <div class="hero-input-group">
+                        <input type="text" name="name" placeholder="Imię" required aria-label="Imię">
+                    </div>
+
+                    <div class="hero-input-group">
+                        <input type="email" name="email" placeholder="Email" required aria-label="Email">
+                    </div>
+
+                    <div class="hero-input-group select-wrapper">
+                        <select name="service" required aria-label="Wybierz usługę">
+                            <option value="" disabled selected>Wybierz...</option>
+                            <option value="wycena">Bezpłatna konsultacja</option>
+                            <option value="audyt">Audyt techniczny</option>
+                            <option value="serwis">Przegląd okresowy/Zgłoszenie naprawy</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-hero-submit">WYŚLIJ</button>
+                </form>
+                <div id="heroFormMessage" class="hero-form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM AND SOLUTION SECTION -->
+    <section class="section problem-solution-section" id="problem-rozwiazanie">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Dlaczego klimatyzacja?</p>
+                <h2>Komfort termiczny,<br>którego naprawdę potrzebujesz</h2>
+            </div>
+
+            <div class="problem-solution-container">
+                <!-- PROBLEM ROW -->
+                <div class="problem-row">
+                    <div class="problem-content">
+                        <div class="problem-icon">
+                            <img src="ai-icons/Wyzwanie.png" alt="Wyzwanie" style="width:56px;height:56px;mix-blend-mode:screen;object-fit:contain;">
+                        </div>
+                        <h3>Wyzwanie</h3>
+                        <p>
+                            Polskie lata stają się coraz gorętsze, a tradycyjne metody ochładzania domu nie wystarczają. Wentylatory jedynie poruszają powietrze, nie obniżając temperatury. Otwarte okna wpuszczają hałas i zanieczyszczenia. W efekcie – niewyspane noce, spadek produktywności w pracy i ogólny dyskomfort w własnym domu przez kilka miesięcy w roku.
+                        </p>
+                    </div>
+                    <div class="problem-image">
+                        <picture>
+                            <source srcset="zdjecia-wnetrza/zdjecie1.webp" type="image/webp">
+                            <img src="zdjecia-wnetrza/zdjecie1.png" alt="Luksusowe wnętrze wieczorem" loading="lazy" width="600" height="400" decoding="async">
+                        </picture>
+                    </div>
+                </div>
+
+                <!-- SOLUTION ROW -->
+                <div class="solution-row">
+                    <div class="solution-image">
+                        <picture>
+                            <source srcset="zdjecia-wnetrza/zdjecie3.webp" type="image/webp">
+                            <img src="zdjecia-wnetrza/zdjecie3.png" alt="Nowoczesne wnętrze z klimatyzacją" loading="lazy" width="600" height="400" decoding="async">
+                        </picture>
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-icon">
+                            <img src="ai-icons/Nasze rozwiązanie.png" alt="Nasze rozwiązanie" style="width:56px;height:56px;mix-blend-mode:screen;object-fit:contain;">
+                        </div>
+                        <h3>Nasze rozwiązanie</h3>
+                        <p>
+                            Profesjonalny system klimatyzacji premium zapewnia idealną temperaturę przez cały rok. Cicha praca, czyste powietrze dzięki zaawansowanym filtrom, minimalne zużycie energii dzięki technologii Inverter. Instalujemy tylko sprawdzone japońskie marki z 5-letnią gwarancją. Efekt? Spokojny sen, maksymalna koncentracja i pełny komfort w Twoim domu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="section benefits-section" id="korzysci">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Dlaczego my</p>
+                <h2>5 kluczowych korzyści<br>z instalacji klimatyzacji premium</h2>
+                <p>Inwestycja w klimatyzację to decyzja na lata. Sprawdź, co zyskujesz wybierając nasze usługi i najwyższej klasy sprzęt.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">❄</div>
+                    <h3>Perfekcyjny komfort</h3>
+                    <p>Idealna temperatura przez cały rok – chłodzenie latem, efektywne ogrzewanie wiosną i jesienią. Cicha praca nie zakłóca Twojego spokoju ani snu.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Niskie koszty eksploatacji</h3>
+                    <p>Technologia Inverter klasy A+++ zużywa minimum energii. Średni koszt to jedynie 150-250 zł miesięcznie w sezonie – mniej niż myślisz!</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡</div>
+                    <h3>Gwarancja i serwis</h3>
+                    <p>5 lat gwarancji na instalację, profesjonalne wsparcie techniczne 24/7, regularne przeglądy. Masz pewność, że jesteśmy zawsze na wyciągnięcie ręki.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Czyste powietrze</h3>
+                    <p>Zaawansowane filtry plazmowe i jonizatory eliminują alergeny, kurz, bakterie i wirusy. Twoje zdrowie i samopoczucie na pierwszym miejscu.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Inteligentne sterowanie</h3>
+                    <p>Kontroluj klimatyzację z aplikacji mobilnej – z domu, z pracy, z urlopu. Integracja ze Smart Home i asystentami głosowymi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section section-light" id="uslugi">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Co oferujemy</p>
+                <h2>Kompleksowe rozwiązania<br>klimatyzacyjne</h2>
+                <p>Od konsultacji po wieloletni serwis – zajmujemy się wszystkim, abyś mógł cieszyć się idealnym klimatem w swoim domu.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Projektowanie Systemu.png" alt="Projektowanie i dobór systemu" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Projektowanie i dobór systemu</h3>
+                    <p>Analizujemy Twoje potrzeby i architekturę budynku, aby dobrać najbardziej efektywne i estetyczne rozwiązanie. Każdy projekt to indywidualne podejście.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Montaz i Instalacja.png" alt="Montaż i instalacja" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Montaż i instalacja</h3>
+                    <p>Precyzyjny montaż wykonywany przez certyfikowanych specjalistów. Dbamy o estetykę, bezpieczeństwo i bezgłośną pracę systemu.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Serwis i konserwacja.png" alt="Serwis i konserwacja" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Serwis i konserwacja</h3>
+                    <p>Regularne przeglądy, czyszczenie i konserwacja zapewniają długotrwałą sprawność. Oferujemy pakiety serwisowe dostosowane do Twoich potrzeb.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Wsparcie Techniczne.png" alt="Wsparcie techniczne" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Wsparcie techniczne</h3>
+                    <p>Jesteśmy dostępni, gdy nas potrzebujesz. Szybka reakcja na zgłoszenia i profesjonalne doradztwo techniczne przez cały rok.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Modernizacja Systemow.png" alt="Modernizacja systemów" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Modernizacja systemów</h3>
+                    <p>Wymieniamy stare, nieefektywne systemy na nowoczesne rozwiązania. Zwiększamy komfort i obniżamy koszty eksploatacji.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="background:none;box-shadow:none;width:96px;height:96px;">
+                        <img src="ai-icons/Smart Home Systems.png" alt="Systemy Smart Home" style="width:96px;height:96px;object-fit:contain;">
+                    </div>
+                    <h3>Systemy Smart Home</h3>
+                    <p>Integrujemy klimatyzację z inteligentnymi systemami zarządzania domem. Pełna kontrola z poziomu aplikacji mobilnej.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS SECTION -->
+    <section class="section" id="marki">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Marki premium</p>
+                <h2>Współpracujemy z najlepszymi</h2>
+                <p>Instalujemy wyłącznie systemy renomowanych japońskich producentów, znanych z niezawodności, energooszczędności i najwyższej jakości wykonania.</p>
+            </div>
+        </div>
+
+        <div class="brands-scroll-container">
+            <div class="brands-scroll-hint">Najedź kursorem, aby zatrzymać</div>
+            <div class="brands-track" id="brandsTrack">
+                <!-- First set of brands -->
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/daikin_logo_RGB_1000_277.png" alt="Daikin" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Lider światowego rynku klimatyzacji. Innowacyjne technologie, wysoka efektywność energetyczna i wyjątkowa trwałość.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/ME1.png" alt="Mitsubishi Electric" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Japońska precyzja i niezawodność. Systemy znane z cichej pracy, eleganckich wzorów i zaawansowanych funkcji.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Toshiba1.jpg" alt="Toshiba" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Renomowany producent z wieloletnią tradycją. Łączy nowoczesne technologie z eleganckim designem i ekonomią użytkowania.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Color-Panasonic-Logo.jpg" alt="Panasonic" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Technologia nanoe™ X i inteligentne sterowanie. Systemy ekologiczne z troską o zdrowie i komfort użytkowników.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Fujitsu-ok.png" alt="Fujitsu" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Zaawansowane filtry plazmowe i cicha praca. Japońska jakość potwierdzona licznymi nagrodami branżowymi.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/hitachi.jpg" alt="Hitachi" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Innowacyjna technologia FrostWash i samoczyszczenie. Perfekcyjne połączenie mocy chłodzenia z energooszczędnością.</p>
+                </div>
+
+                <!-- Duplicate set for seamless infinite scroll -->
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/daikin_logo_RGB_1000_277.png" alt="Daikin" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Lider światowego rynku klimatyzacji. Innowacyjne technologie, wysoka efektywność energetyczna i wyjątkowa trwałość.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/ME1.png" alt="Mitsubishi Electric" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Japońska precyzja i niezawodność. Systemy znane z cichej pracy, eleganckich wzorów i zaawansowanych funkcji.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Toshiba1.jpg" alt="Toshiba" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Renomowany producent z wieloletnią tradycją. Łączy nowoczesne technologie z eleganckim designem i ekonomią użytkowania.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Color-Panasonic-Logo.jpg" alt="Panasonic" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Technologia nanoe™ X i inteligentne sterowanie. Systemy ekologiczne z troską o zdrowie i komfort użytkowników.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/Fujitsu-ok.png" alt="Fujitsu" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Zaawansowane filtry plazmowe i cicha praca. Japońska jakość potwierdzona licznymi nagrodami branżowymi.</p>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo"><img src="logo producentów/hitachi.jpg" alt="Hitachi" width="200" height="70" loading="lazy" decoding="async"></div>
+                    <p class="brand-description">Innowacyjna technologia FrostWash i samoczyszczenie. Perfekcyjne połączenie mocy chłodzenia z energooszczędnością.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Baner realizacji -->
+        <div class="realizacje-banner">
+            <a href="realizacje.html">
+                <span class="realizacje-banner-text">850+ zrealizowanych instalacji</span>
+                <span class="realizacje-banner-arrow">Zobacz nasze realizacje →</span>
+            </a>
+        </div>
+    </section>
+
+<!-- ============================================
+   TESTIMONIALS SECTION - Now with Infinite Scroller
+   ============================================ -->
+<section class="section testimonials-section" id="opinie">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Opinie klientów</p>
+            <h2>Zaufały nam setki<br>zadowolonych klientów</h2>
+            <p>Nie wierz nam na słowo – posłuchaj, co mówią nasi klienci o naszych usługach i jakości wykonania.</p>
+        </div>
+    </div>
+
+    <div class="testimonials-scroller">
+        <div class="scroller__inner">
+            <!-- Original Testimonials -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AK</div>
+                    <div class="testimonial-info">
+                        <h4>Anna Kowalska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Profesjonalna obsługa od początku do końca. Montaż trwał dokładnie tyle, ile obiecali, a ekipa pozostawiła wszystko w idealnej czystości. Klimatyzacja działa bezszelestnie. Polecam!
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MN</div>
+                    <div class="testimonial-info">
+                        <h4>Marek Nowak</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Instalacja klimatyzacji Daikin w całym domu była najlepszą decyzją. Panowie dobrali system idealnie. Szczególnie doceniam możliwość sterowania z telefonu – mogę włączyć klimę przed powrotem.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">KW</div>
+                    <div class="testimonial-info">
+                        <h4>Katarzyna Wiśniewska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Po sezonie użytkowania mogę powiedzieć, że to była świetna inwestycja. Klimatyzacja pracuje bardzo cicho, moja alergiczka córka znacznie lepiej śpi. Serwis reaguje błyskawicznie na każde pytanie.
+                </p>
+            </div>
+            <!-- New Testimonials -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MW</div>
+                    <div class="testimonial-info">
+                        <h4>Marcin Wiśniewski</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    System klimatyzacji, który mi doradzono, sprawdza się rewelacyjnie. Cenię sobie profesjonalne podejście i terminowość. Zdecydowanie polecam.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EZ</div>
+                    <div class="testimonial-info">
+                        <h4>Ewa Zielińska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Obsługa na najwyższym poziomie. Panowie to prawdziwi eksperci. Czysto, sprawnie i w dobrej cenie.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">TS</div>
+                    <div class="testimonial-info">
+                        <h4>Tomasz Szymański</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Jestem bardzo zadowolony z montażu klimatyzacji w moim biurze. System działa cicho i wydajnie. Cały proces przebiegł bezproblemowo.
+                </p>
+            </div>
+
+            <!-- Duplicated Testimonials for seamless scroll -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AK</div>
+                    <div class="testimonial-info">
+                        <h4>Anna Kowalska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Profesjonalna obsługa od początku do końca. Montaż trwał dokładnie tyle, ile obiecali, a ekipa pozostawiła wszystko w idealnej czystości. Klimatyzacja działa bezszelestnie. Polecam!
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MN</div>
+                    <div class="testimonial-info">
+                        <h4>Marek Nowak</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Instalacja klimatyzacji Daikin w całym domu była najlepszą decyzją. Panowie dobrali system idealnie. Szczególnie doceniam możliwość sterowania z telefonu – mogę włączyć klimę przed powrotem.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">KW</div>
+                    <div class="testimonial-info">
+                        <h4>Katarzyna Wiśniewska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Po sezonie użytkowania mogę powiedzieć, że to była świetna inwestycja. Klimatyzacja pracuje bardzo cicho, moja alergiczka córka znacznie lepiej śpi. Serwis reaguje błyskawicznie na każde pytanie.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MW</div>
+                    <div class="testimonial-info">
+                        <h4>Marcin Wiśniewski</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    System klimatyzacji, który mi doradzono, sprawdza się rewelacyjnie. Cenię sobie profesjonalne podejście i terminowość. Zdecydowanie polecam.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EZ</div>
+                    <div class="testimonial-info">
+                        <h4>Ewa Zielińska</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Obsługa na najwyższym poziomie. Panowie to prawdziwi eksperci. Czysto, sprawnie i w dobrej cenie.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">TS</div>
+                    <div class="testimonial-info">
+                        <h4>Tomasz Szymański</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">
+                    Jestem bardzo zadowolony z montażu klimatyzacji w moim biurze. System działa cicho i wydajnie. Cały proces przebiegł bezproblemowo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="testimonials-counter">
+            <div class="counter-number">850+</div>
+            <p class="counter-label">Zadowolonych klientów w ciągu 15 lat działalności</p>
+        </div>
+    </div>
+</section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section section-light" id="proces">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Jak pracujemy</p>
+                <h2>Precyzja w każdym detalu</h2>
+                <p>Bezpieczeństwo, profesjonalizm i odpowiedzialność to fundamenty i wartości w naszej pracy. Pięć kroków od konsultacji po lata serwisu – jesteśmy z Tobą na każdym etapie.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <div class="process-content">
+                        <h3>Bezpłatna konsultacja</h3>
+                        <p>Spotykamy się u Ciebie w domu. Rozmawiamy o Twoich potrzebach, analizujemy architekturę budynku i proponujemy optymalne rozwiązania. Wszystko bez zobowiązań.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <div class="process-content">
+                        <h3>Projekt i wycena</h3>
+                        <p>Przygotowujemy szczegółowy projekt instalacji z uwzględnieniem estetyki i funkcjonalności. Otrzymujesz przejrzystą wycenę bez ukrytych kosztów.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <div class="process-content">
+                        <h3>Profesjonalny montaż</h3>
+                        <p>Nasz certyfikowany zespół wykonuje instalację zgodnie z najwyższymi standardami. Dbamy o czystość, porządek i Twój spokój podczas prac.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <div class="process-content">
+                        <h3>Uruchomienie i szkolenie</h3>
+                        <p>Testujemy system, upewniamy się, że wszystko działa perfekcyjnie. Pokazujemy Ci, jak obsługiwać klimatyzację i korzystać ze wszystkich jej funkcji.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <div class="process-content">
+                        <h3>Opieka serwisowa</h3>
+                        <p>Po zakończeniu instalacji nie kończy się nasza opieka. Oferujemy regularne przeglądy, konserwację i jesteśmy zawsze gotowi pomóc w razie potrzeby.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="section pricing-section" id="cennik">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Oferta i cennik</p>
+                <h2>Wybierz pakiet<br>dopasowany do Twoich potrzeb</h2>
+                <p>Transparentne ceny, bez ukrytych kosztów. Wszystkie pakiety zawierają profesjonalny montaż i pełne wsparcie techniczne.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- BASIC PACKAGE -->
+                <div class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="zdjecia-klimatyzatory/me-basic.jpg" alt="Klimatyzator Basic" width="400" height="300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Basic</h3>
+                            <div class="pricing-price">od 8 500 zł</div>
+                            <p class="pricing-price-note">za kompletny system</p>
+                        </div>
+
+                        <ul class="pricing-features">
+                            <li>Klimatyzacja split 2,5-3,5 kW</li>
+                            <li>Sprawdzona marka japońska</li>
+                            <li>Klasa energetyczna A++</li>
+                            <li>Profesjonalny montaż</li>
+                            <li>5 lat gwarancji</li>
+                            <li>Podstawowe filtry powietrza</li>
+                            <li>Pilot zdalnego sterowania</li>
+                        </ul>
+
+                        <a href="tel:+48729870000" class="pricing-cta">Dowiedz się więcej</a>
+                    </div>
+                </div>
+
+                <!-- OPTIMAL PACKAGE (RECOMMENDED) -->
+                <div class="pricing-card recommended">
+                    <div class="pricing-badge">★ Najczęściej wybierany</div>
+                    <div class="pricing-image">
+                        <img src="zdjecia-klimatyzatory/me-optimal.jpg" alt="Klimatyzator Optimal" width="400" height="300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Optimal</h3>
+                            <div class="pricing-price">od 12 500 zł</div>
+                            <p class="pricing-price-note">za kompletny system</p>
+                        </div>
+
+                        <ul class="pricing-features">
+                            <li>Klimatyzacja split 3,5-5,0 kW</li>
+                            <li>Premium marki (Daikin/Mitsubishi)</li>
+                            <li>Klasa energetyczna A+++</li>
+                            <li>Profesjonalny montaż</li>
+                            <li>5 lat gwarancji + serwis</li>
+                            <li>Filtry plazmowe i jonizator</li>
+                            <li>Sterowanie Wi-Fi przez aplikację</li>
+                            <li>Tryb nocny i czujniki ruchu</li>
+                            <li>Funkcja grzania i osuszania</li>
+                        </ul>
+
+                        <a href="tel:+48729870000" class="pricing-cta">Dowiedz się więcej</a>
+                    </div>
+                </div>
+
+                <!-- PREMIUM PACKAGE -->
+                <div class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="zdjecia-klimatyzatory/daikin-premium.jpg" alt="Klimatyzator Premium" width="400" height="300" loading="lazy" decoding="async">
+                    </div>
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Premium Multi</h3>
+                            <div class="pricing-price">od 22 000 zł</div>
+                            <p class="pricing-price-note">za kompletny system</p>
+                        </div>
+
+                        <ul class="pricing-features">
+                            <li>System Multi Split (3-4 jednostki)</li>
+                            <li>Top marki premium</li>
+                            <li>Klasa energetyczna A+++</li>
+                            <li>Profesjonalny montaż</li>
+                            <li>5 lat gwarancji + pakiet serwisowy</li>
+                            <li>Zaawansowane filtry i oczyszczanie</li>
+                            <li>Pełna integracja Smart Home</li>
+                            <li>Kontrola głosowa (Alexa, Google)</li>
+                            <li>Indywidualna regulacja w każdym pomieszczeniu</li>
+                            <li>Tryby Eco i AI automatyka</li>
+                        </ul>
+
+                        <a href="tel:+48729870000" class="pricing-cta">Dowiedz się więcej</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section section-light" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>FAQ - najczęściej zadawane pytania o klimatyzacji i montażu</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ile kosztuje montaż klimatyzacji?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Koszt montażu klimatyzacji zależy od wielu czynników: typu urządzenia, mocy, lokalizacji jednostek, długości instalacji oraz stopnia skomplikowania prac. Podczas bezpłatnego audytu dokładnie oceniamy Twoje potrzeby i przedstawiamy szczegółową wycenę. Zazwyczaj koszt kompletnej instalacji dla domu jednorodzinnego waha się od 8 000 do 15 000 zł, w zależności od wybranego systemu i zakresu prac.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Jak długo trwa montaż klimatyzacji?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standardowy montaż klimatyzacji typu split (jedna jednostka wewnętrzna + jedna zewnętrzna) zajmuje od 4 do 8 godzin. Inaczej jest w przypadku systemów Multi Split lub bardziej zaawansowanych instalacji, gdzie czas może wydłużyć się do 1-2 dni roboczych. Podczas audytu dokładnie określamy harmonogram prac dostosowany do Twojej sytuacji.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy klimatyzacja zużywa dużo prądu?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nowoczesne klimatyzatory klasy A+++ są bardzo energooszczędne. Średni koszt eksploatacji klimatyzacji w sezonie letnim to około 150-300 zł miesięcznie, w zależności od intensywności użytkowania i wielkości chłodzonego pomieszczenia. Systemy Inverter automatycznie dostosowują moc pracy do potrzeb, co znacząco obniża zużycie energii. Wiele urządzeń posiada również funkcję grzania, która w okresie przejściowym (wiosna/jesień) jest bardziej ekonomiczna niż tradycyjne ogrzewanie elektryczne.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy klimatyzacja wymaga konserwacji?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tak, regularna konserwacja jest kluczowa dla długiej żywotności i efektywnej pracy klimatyzacji. Zalecamy profesjonalny przegląd raz w roku (przed sezonem letnim). Obejmuje on czyszczenie filtrów i wymienników, sprawdzenie poziomu czynnika, kontrolę układu elektrycznego oraz wydajności systemu. Podstawowe czyszczenie filtrów możesz wykonywać samodzielnie co 2-3 tygodnie. Oferujemy pakiety serwisowe z regularną konserwacją.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Czy mogę zamontować klimatyzację samodzielnie?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zdecydowanie odradzamy samodzielny montaż klimatyzacji. Instalacja wymaga specjalistycznego sprzętu (pompa próżniowa, manometry, detektor nieszczelności), wiedzy technicznej oraz uprawnień do pracy z czynnikami chłodniczymi. Nieprawidłowy montaż może prowadzić do uszkodzenia urządzenia, utraty gwarancji producenta, niskiej efektywności pracy i zwiększonego zużycia energii. Profesjonalny montaż zapewnia bezpieczeństwo, optymalną wydajność i 5-letnią gwarancję na instalację.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIFIED CONTACT & BOOKING SECTION -->
+    <section class="section" id="rezerwacja">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Skontaktuj się z nami</p>
+                <h2>Gotowy na idealny komfort?</h2>
+                <p>Wybierz najwygodniejszą formę kontaktu. Umów się na bezpłatny audyt online w 60 sekund lub wyślij nam wiadomość.</p>
+            </div>
+
+            <div class="unified-contact-grid">
+                <!-- Left Column: Calendly -->
+                <div class="contact-column">
+                    <div class="contact-box">
+                        <h3>Umów bezpłatny audyt online</h3>
+                        <p>Wybierz dogodny termin w kalendarzu. To najszybszy sposób na rezerwację wizyty.</p>
+                        <div class="calendly-wrapper-inner">
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/jjoxxwiak/bezplatny-audyt-montazu?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2563eb"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-column">
+                    <div class="contact-box">
+                        <h3>Lub napisz do nas</h3>
+                        <p>Masz pytania lub wolisz kontakt mailowy? Wypełnij formularz, a my odezwiemy się do Ciebie.</p>
+                        <form class="contact-form-unified" id="contactForm" aria-label="Formularz kontaktowy">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko *</label>
+                                <input type="text" id="name" name="name" required aria-required="true" placeholder="Jan Kowalski">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="jan@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Wiadomość *</label>
+                                <textarea id="message" name="message" required aria-required="true" placeholder="Opisz krótko swoją potrzebę..."></textarea>
+                            </div>
+                            <div class="form-group rodo-group">
+                                <label class="rodo-label">
+                                    <input type="checkbox" name="rodo" required aria-required="true">
+                                    <span>Wyrażam zgodę na kontakt telefoniczny w celu przedstawienia oferty oraz na otrzymywanie informacji marketingowych. ( <a href="regulamin.html" target="_blank">Regulamin</a> / <a href="polityka-prywatnosci.html" target="_blank">Polityka Prywatności</a> )</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="form-submit">Wyślij wiadomość</button>
+                            <div class="form-message" id="formMessage" role="alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI SUMMARY SECTION -->
+    <section class="ai-summary-section">
+        <div class="ai-summary-container">
+            <p class="ai-summary-text">Poproś AI o podsumowanie naszej oferty</p>
+            <div class="ai-icons">
+                <a href="https://chat.openai.com/?q=Jako%20potencjalny%20klient%20chc%C4%99%20zrozumie%C4%87%20ofert%C4%99%20firmy%20%C5%9AWIAT%20KLIMATYZACJI%20(swiatklimatyzacji.pl).%0A%0AOpisz%20krok%20po%20kroku%20co%20oferuje%20ta%20firma%3A%20jakie%20marki%20klimatyzator%C3%B3w%20instaluj%C4%85%20(Daikin%2C%20Mitsubishi%2C%20Toshiba)%2C%20jak%20wygl%C4%85da%20proces%20od%20konsultacji%20po%20monta%C5%BC%2C%20jakie%20s%C4%85%20pakiety%20cenowe%20i%20co%20zawiera%20gwarancja.%0A%0AWyt%C5%82umacz%20prosto%2C%20jakby%C5%9B%20opisywa%C5%82%20prawdziwe%20do%C5%9Bwiadczenie%20z%20us%C5%82ug%C4%85." target="_blank" rel="noopener noreferrer" class="ai-icon" title="ChatGPT">
+                    <img src="ai-icons/ChatGPT.jpg" alt="ChatGPT" width="40" height="40" loading="lazy" decoding="async">
+                </a>
+                <a href="https://claude.ai/new?q=Jako%20potencjalny%20klient%20chc%C4%99%20zrozumie%C4%87%20ofert%C4%99%20firmy%20%C5%9AWIAT%20KLIMATYZACJI%20(swiatklimatyzacji.pl).%0A%0AOpisz%20krok%20po%20kroku%20co%20oferuje%20ta%20firma%3A%20jakie%20marki%20klimatyzator%C3%B3w%20instaluj%C4%85%20(Daikin%2C%20Mitsubishi%2C%20Toshiba)%2C%20jak%20wygl%C4%85da%20proces%20od%20konsultacji%20po%20monta%C5%BC%2C%20jakie%20s%C4%85%20pakiety%20cenowe%20i%20co%20zawiera%20gwarancja.%0A%0AWyt%C5%82umacz%20prosto%2C%20jakby%C5%9B%20opisywa%C5%82%20prawdziwe%20do%C5%9Bwiadczenie%20z%20us%C5%82ug%C4%85." target="_blank" rel="noopener noreferrer" class="ai-icon" title="Claude">
+                    <img src="ai-icons/Claude.svg" alt="Claude" width="40" height="40" loading="lazy" decoding="async">
+                </a>
+                <a href="https://www.perplexity.ai/search?q=Podsumuj%20ofert%C4%99%20firmy%20%C5%9AWIAT%20KLIMATYZACJI%20ze%20strony%20swiatklimatyzacji.pl%20-%20klimatyzacja%20monta%C5%BC%20serwis%20Daikin%20Mitsubishi" target="_blank" rel="noopener noreferrer" class="ai-icon" title="Perplexity">
+                    <img src="ai-icons/Perplexity.png" alt="Perplexity" width="40" height="40" loading="lazy" decoding="async">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-przezroczyste.png" alt="ŚWIAT KLIMATYZACJI Logo" class="footer-logo-img" width="180" height="50" loading="lazy" decoding="async">
+                    <p>
+                        Tworzymy przestrzenie pełne komfortu i spokoju. Od 15 lat instalujemy systemy klimatyzacji premium dla wymagających klientów.
+                    </p>
+                    <p class="footer-company-info">
+                        ŚWIAT KLIMATYZACJI Sp. z o.o.<br>
+                        ul. Młynarska 42/115, 01-171 Warszawa<br>
+                        NIP: 5273012140
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="#uslugi">Nasze usługi</a></li>
+                        <li><a href="#korzysci">Korzyści</a></li>
+                        <li><a href="#marki">Marki</a></li>
+                        <li><a href="#proces">Jak pracujemy?</a></li>
+                        <li><a href="#cennik">Cennik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="realizacje.html">Realizacje</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="regulamin.html">Regulamin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ŚWIAT KLIMATYZACJI. Wszelkie prawa zastrzeżone. Made by <a href="https://hvaclider.pl" target="_blank" rel="noopener">hvaclider.pl</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Wróć na górę strony">↑</button>
+
+    <!-- FLOATING CTA BUTTON -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="#rezerwacja" class="floating-cta-button">
+            <img src="ai-icons/Kalendarz.png" class="floating-cta-icon" alt="" style="width:48px;height:48px;vertical-align:middle;transform:scale(1.2);flex-shrink:0;">
+            <span>Umów bezpłatną konsultację</span>
+        </a>
+    </div>
+
+    <!-- FLOATING PHONE BUTTON -->
+    <a href="tel:+48729870000" class="floating-phone" aria-label="Zadzwoń: 729 870 000">
+        <svg class="phone-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="currentColor"/>
+        </svg>
+        <span class="phone-number">729 870 000</span>
+    </a>
+
+    <!-- LIVE VIEWERS COUNTER -->
+    <div class="live-viewers">
+        <div class="live-viewers-indicator"></div>
+        <div class="live-viewers-content">
+            <span class="live-viewers-icon">👁️</span>
+            <span class="live-viewers-text">
+                <span class="live-viewers-count" id="viewersCount">8</span> osób ogląda <strong>Pakiety cenowe</strong>
+            </span>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>Używamy cookies, aby zapewnić najlepsze doświadczenia. <a href="polityka-prywatnosci.html">Więcej</a></p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.min.js" defer></script>
+    <script>
+        // Cookie Banner
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBanner').classList.add('hidden');
+        }
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookieBanner').classList.add('visible');
+        }
+    </script>
+</body>
+</html>

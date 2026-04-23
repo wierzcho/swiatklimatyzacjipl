@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Realizacje ŚWIAT KLIMATYZACJI - zobacz nasze instalacje klimatyzacji Mitsubishi Electric, Daikin, Hitachi dla klientów biznesowych i prywatnych.">
+    <meta name="keywords" content="realizacje klimatyzacji, montaż klimatyzacji, instalacje Mitsubishi Electric, Daikin, Hitachi, portfolio klimatyzacja">
+    <title>Realizacje | ŚWIAT KLIMATYZACJI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.min.css">
+
+    <style>
+        /* ===== HERO ===== */
+        .realizacje-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 2rem 80px;
+            text-align: center;
+            color: var(--color-white);
+            background: #050a18;
+            overflow: hidden;
+        }
+
+        .realizacje-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(37, 99, 235, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 188, 212, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 140, 66, 0.2) 0%, transparent 50%);
+            animation: meshMove 15s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes meshMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(2%, 2%) rotate(1deg); }
+            50% { transform: translate(-1%, 3%) rotate(-1deg); }
+            75% { transform: translate(3%, -2%) rotate(2deg); }
+        }
+
+        .realizacje-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+
+        .realizacje-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .realizacje-hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 500;
+            background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 50%, #ffffff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .realizacje-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-orb-1 {
+            width: 300px; height: 300px;
+            background: rgba(37, 99, 235, 0.5);
+            top: 10%; left: 10%;
+        }
+
+        .hero-orb-2 {
+            width: 250px; height: 250px;
+            background: rgba(139, 92, 246, 0.4);
+            top: 60%; right: 15%;
+            animation-delay: -3s;
+        }
+
+        .hero-orb-3 {
+            width: 200px; height: 200px;
+            background: rgba(0, 188, 212, 0.4);
+            bottom: 20%; left: 20%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        .hero-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-counter-dot {
+            width: 8px; height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* ===== TAB NAVIGATION ===== */
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2.5rem 2rem 0;
+            background: var(--color-off-white);
+        }
+
+        .tab-btn {
+            padding: 0.85rem 2.2rem;
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            color: #334155;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background: rgba(37, 99, 235, 0.08);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+        }
+
+        /* ===== SECTION CONTAINERS ===== */
+        .section-b2b,
+        .section-priv {
+            padding: 50px 0 80px;
+            background: var(--color-off-white);
+        }
+
+        .section-priv {
+            display: none;
+            background: #fafaf8;
+        }
+
+        .section-b2b.active,
+        .section-priv.active {
+            display: block;
+        }
+
+        /* ===== B2B CASE STUDY CARDS ===== */
+        .b2b-cards {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .b2b-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: linear-gradient(145deg, #0f1a3d 0%, #162050 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .b2b-card.reversed {
+            direction: rtl;
+        }
+
+        .b2b-card.reversed > * {
+            direction: ltr;
+        }
+
+        /* Slider */
+        .b2b-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .b2b-slider img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .b2b-slider img.active {
+            opacity: 1;
+        }
+
+        .b2b-slider video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .slider-arrow:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .slider-arrow.prev { left: 12px; }
+        .slider-arrow.next { right: 12px; }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 5;
+        }
+
+        .slider-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #fff;
+            transform: scale(1.2);
+        }
+
+        /* B2B Description */
+        .b2b-desc {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .b2b-desc-badge {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            background: rgba(37, 99, 235, 0.25);
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            border-radius: 20px;
+            color: #7dd3fc;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .b2b-desc h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+
+        .b2b-desc-meta {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.2rem;
+        }
+
+        .b2b-desc-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .b2b-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .b2b-benefits li {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .b2b-benefits li::before {
+            content: '\2714';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-size: 0.85rem;
+        }
+
+        /* ===== PRIV GRID ===== */
+        .priv-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .priv-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .priv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .priv-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .priv-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .priv-tag {
+            position: absolute;
+            top: 1rem; left: 1rem;
+            background: rgba(5, 10, 24, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .priv-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(15, 26, 61, 0.95) 0%, rgba(15, 26, 61, 0.7) 50%, transparent 100%);
+            padding: 3rem 1.5rem 1.5rem;
+            transform: translateY(calc(100% - 70px));
+            transition: transform 0.35s ease;
+        }
+
+        .priv-card:hover .priv-overlay {
+            transform: translateY(0);
+        }
+
+        .priv-overlay h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .priv-overlay p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .priv-overlay-hint {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            width: 50px; height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease;
+            z-index: 10;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            max-width: 1100px;
+            width: 100%;
+            max-height: 85vh;
+            background: #0f1a3d;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .lightbox-gallery {
+            position: relative;
+            min-height: 400px;
+            background: #000;
+        }
+
+        .lightbox-gallery img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .lightbox-gallery img.active {
+            opacity: 1;
+        }
+
+        .lightbox-gallery .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-gallery .slider-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .lightbox-info {
+            padding: 2.5rem;
+            overflow-y: auto;
+            color: #fff;
+        }
+
+        .lightbox-info h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .lightbox-info-meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.2rem;
+        }
+
+        .lightbox-info-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.2rem;
+        }
+
+        .lightbox-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .lightbox-benefits li {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.85);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .lightbox-benefits li::before {
+            content: '\2714';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+        }
+
+        /* ===== CTA ===== */
+        .realizacje-cta {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .realizacje-cta h2 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .realizacje-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .realizacje-cta .btn {
+            background: var(--color-orange);
+            color: var(--color-white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .realizacje-cta .btn:hover {
+            background: var(--color-orange-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .b2b-card {
+                grid-template-columns: 1fr;
+            }
+
+            .b2b-card.reversed {
+                direction: ltr;
+            }
+
+            .b2b-slider {
+                min-height: 300px;
+            }
+
+            .lightbox-content {
+                grid-template-columns: 1fr;
+                max-height: 90vh;
+            }
+
+            .lightbox-gallery {
+                min-height: 300px;
+            }
+
+            .lightbox-info {
+                padding: 1.5rem;
+                max-height: 40vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .realizacje-hero {
+                min-height: 40vh;
+                padding: 120px 1.5rem 60px;
+            }
+
+            .realizacje-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .realizacje-hero p {
+                font-size: 1rem;
+            }
+
+            .hero-counter {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-orb-1,
+            .hero-orb-2,
+            .hero-orb-3 {
+                opacity: 0.5;
+            }
+
+            .tabs-nav {
+                padding: 2rem 1rem 0;
+            }
+
+            .tab-btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .b2b-desc {
+                padding: 1.8rem;
+            }
+
+            .b2b-desc h3 {
+                font-size: 1.35rem;
+            }
+
+            .priv-card img {
+                height: 260px;
+            }
+
+            .realizacje-cta {
+                padding: 40px 1.5rem;
+            }
+
+            .realizacje-cta h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .realizacje-hero {
+                padding: 110px 1rem 50px;
+                min-height: 35vh;
+            }
+
+            .realizacje-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-counter {
+                margin-bottom: 1.5rem;
+            }
+
+            .tabs-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.7rem;
+            }
+
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .b2b-cards {
+                padding: 0 1rem;
+            }
+
+            .b2b-slider {
+                min-height: 240px;
+            }
+
+            .b2b-desc {
+                padding: 1.5rem;
+            }
+
+            .b2b-desc h3 {
+                font-size: 1.2rem;
+            }
+
+            .b2b-desc-text {
+                font-size: 0.9rem;
+            }
+
+            .b2b-benefits li {
+                font-size: 0.85rem;
+            }
+
+            .priv-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+                gap: 1.5rem;
+            }
+
+            .priv-card img {
+                height: 240px;
+            }
+
+            .priv-overlay {
+                transform: translateY(0);
+                background: linear-gradient(to top, rgba(15, 26, 61, 0.9) 0%, transparent 100%);
+                padding: 2rem 1rem 1rem;
+            }
+
+            .priv-overlay h3 {
+                font-size: 1.1rem;
+            }
+
+            .priv-tag {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .lightbox {
+                padding: 0.5rem;
+            }
+
+            .lightbox-content {
+                border-radius: 12px;
+            }
+
+            .lightbox-gallery {
+                min-height: 220px;
+            }
+
+            .lightbox-info {
+                padding: 1.2rem;
+            }
+
+            .lightbox-info h3 {
+                font-size: 1.2rem;
+            }
+
+            .lightbox-close {
+                top: 0.5rem;
+                right: 0.5rem;
+                width: 40px; height: 40px;
+                font-size: 2rem;
+            }
+
+            .realizacje-cta .btn {
+                padding: 0.9rem 2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .realizacje-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .priv-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo" aria-label="Strona główna ŚWIAT KLIMATYZACJI">
+                <img src="logo-biale.png" alt="ŚWIAT KLIMATYZACJI Logo" class="header-logo" width="200" height="50">
+            </a>
+
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu nawigacyjne" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#korzysci">Korzyści</a></li>
+                <li><a href="index.html#uslugi">Nasze usługi</a></li>
+                <li><a href="index.html#marki">Marki</a></li>
+                <li><a href="index.html#proces">Jak pracujemy?</a></li>
+                <li><a href="index.html#cennik">Pakiety cenowe</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="abc-klimatyzacji.html">ABC Klimatyzacji</a></li>
+                <li><a href="index.html#rezerwacja">Kontakt</a></li>
+                <li><a href="index.html#rezerwacja" class="nav-cta">Umów audyt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="realizacje-hero">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <div class="realizacje-hero-content">
+            <div class="hero-counter">
+                <span class="hero-counter-dot"></span>
+                850+ zrealizowanych projektów
+            </div>
+            <h1>Nasze realizacje</h1>
+            <p>Profesjonalne instalacje klimatyzacji dla klientów biznesowych i prywatnych. Zobacz wybrane projekty z naszego portfolio.</p>
+        </div>
+    </section>
+
+    <!-- TAB NAVIGATION -->
+    <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="b2b" onclick="switchTab('b2b')">Klienci biznesowi (B2B)</button>
+        <button class="tab-btn" data-tab="priv" onclick="switchTab('priv')">Klienci indywidualni</button>
+    </div>
+
+    <!-- ===== B2B SECTION ===== -->
+    <section class="section-b2b active" id="section-b2b">
+        <div class="b2b-cards">
+
+            <!-- B2B 1: Studio Nagrań Rembertów (galeria lewa, opis prawa) -->
+            <div class="b2b-card" data-slider="studio">
+                <div class="b2b-slider">
+                    <img src="REFERENCJE/B2B/HITACHI_STUDIO NAGRAN_JW.jpg" alt="Studio nagrań Rembertów - jednostka wewnętrzna" class="active" loading="lazy">
+                    <img src="REFERENCJE/B2B/HITACHI_STUDIO NAGRAN_JW1.jpg" alt="Studio nagrań Rembertów - montaż" loading="lazy">
+                    <img src="REFERENCJE/B2B/HITACHI_STUDIO NAGRAN_JZ.jpg" alt="Studio nagrań Rembertów - jednostka zewnętrzna" loading="lazy">
+                    <button class="slider-arrow prev" onclick="slideB2B('studio', -1)">&larr;</button>
+                    <button class="slider-arrow next" onclick="slideB2B('studio', 1)">&rarr;</button>
+                    <div class="slider-dots">
+                        <button class="slider-dot active" onclick="goToSlideB2B('studio', 0)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('studio', 1)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('studio', 2)"></button>
+                    </div>
+                </div>
+                <div class="b2b-desc">
+                    <span class="b2b-desc-badge">Hitachi</span>
+                    <h3>Studio nagrań, Rembertów</h3>
+                    <p class="b2b-desc-meta">Klimatyzacja do serwerowni | Listopad 2021</p>
+                    <p class="b2b-desc-text">W specjalistycznej serwerowni studia nagrań w Rembertowie zastosowano klimatyzację Hitachi, zaprojektowaną z myślą o pracy 24/7 w trybie heavy-duty. Rozwiązanie dobrane pod maksymalną niezawodność i stabilność parametrów – kluczowych dla sprzętu audio i IT.</p>
+                    <ul class="b2b-benefits">
+                        <li>Stała, kontrolowana temperatura – bezpieczna praca serwerów</li>
+                        <li>Japońska niezawodność Hitachi – ciągła eksploatacja przez lata</li>
+                        <li>Cicha praca – kluczowa w środowisku studyjnym</li>
+                        <li>Stabilność przy długotrwałym obciążeniu</li>
+                        <li>Precyzyjny montaż techniczny</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- B2B 2: Duńska sieć handlowa Pomiechówek (opis lewa, galeria prawa) -->
+            <div class="b2b-card reversed" data-slider="retail1">
+                <div class="b2b-slider">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir_VRV_DUŃSKA SIEĆ SKLEPÓW_Pomiechóek.jpg" alt="Duńska sieć handlowa Pomiechówek - klimatyzacja komercyjna" class="active" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir_VRV_DUŃSKA SIEĆ SKLEPÓW_Pomiechówek1.jpg" alt="Duńska sieć handlowa Pomiechówek - jednostki zewnętrzne" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir_VRV_DUŃSKA SIEĆ SKLEPÓW_Pomiechówek2.jpg" alt="Duńska sieć handlowa Pomiechówek - instalacja" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir_VRV_DUŃSKA SIEĆ SKLEPÓW_Pomiechówek3.jpg" alt="Duńska sieć handlowa Pomiechówek - jednostki wewnętrzne" loading="lazy">
+                    <button class="slider-arrow prev" onclick="slideB2B('retail1', -1)">&larr;</button>
+                    <button class="slider-arrow next" onclick="slideB2B('retail1', 1)">&rarr;</button>
+                    <div class="slider-dots">
+                        <button class="slider-dot active" onclick="goToSlideB2B('retail1', 0)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail1', 1)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail1', 2)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail1', 3)"></button>
+                    </div>
+                </div>
+                <div class="b2b-desc">
+                    <span class="b2b-desc-badge">Daikin SkyAir / VRV</span>
+                    <h3>Duńska sieć handlowa – Pomiechówek</h3>
+                    <p class="b2b-desc-meta">Realizacja Turn Key | woj. mazowieckie</p>
+                    <p class="b2b-desc-text">Kompleksowa realizacja HVAC w formule jednego odpowiedzialnego wykonawcy. Zastosowano systemy Daikin SkyAir Alpha Series oraz VRV 5 – kasetowe jednostki sufitowe z nawiewem 360° w sali sprzedaży oraz ścienne jednostki na zapleczu.</p>
+                    <ul class="b2b-benefits">
+                        <li>Dobór urządzeń pod obciążenia cieplne obiektu</li>
+                        <li>Kasetowe jednostki sufitowe – równomierny nawiew 360°</li>
+                        <li>Profesjonalna izolacja tras freonowych</li>
+                        <li>Zgodność z wymaganiami producenta i przepisami F-gas</li>
+                        <li>Uruchomienie, testy i przekazanie do eksploatacji</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- B2B 3: Duńska sieć handlowa kuj-pom (galeria lewa, opis prawa) -->
+            <div class="b2b-card" data-slider="retail2">
+                <div class="b2b-slider">
+                    <img src="REFERENCJE/B2B/DAIKIN_Daikin_SkyAir_Alpha Series_DUŃSKA SIEĆ SKLEPÓW_Woj.kuj-pom.jpg" alt="Duńska sieć handlowa kuj-pom - Daikin SkyAir Alpha" class="active" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir Alpha Series_DUŃSKA SIEĆ SKLEPÓW_Woj.kuj-pom1.jpg" alt="Duńska sieć handlowa kuj-pom - jednostki kasetowe" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir Alpha Series_DUŃSKA SIEĆ SKLEPÓW_Woj.kuj-pom2.jpg" alt="Duńska sieć handlowa kuj-pom - montaż" loading="lazy">
+                    <img src="REFERENCJE/B2B/DAIKIN_SkyAir Alpha Series_DUŃSKA SIEĆ SKLEPÓW_Woj.kuj-pom3.jpg" alt="Duńska sieć handlowa kuj-pom - jednostki zewnętrzne" loading="lazy">
+                    <button class="slider-arrow prev" onclick="slideB2B('retail2', -1)">&larr;</button>
+                    <button class="slider-arrow next" onclick="slideB2B('retail2', 1)">&rarr;</button>
+                    <div class="slider-dots">
+                        <button class="slider-dot active" onclick="goToSlideB2B('retail2', 0)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail2', 1)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail2', 2)"></button>
+                        <button class="slider-dot" onclick="goToSlideB2B('retail2', 3)"></button>
+                    </div>
+                </div>
+                <div class="b2b-desc">
+                    <span class="b2b-desc-badge">Daikin SkyAir Alpha</span>
+                    <h3>Duńska sieć handlowa – woj. kujawsko-pomorskie</h3>
+                    <p class="b2b-desc-meta">Klimatyzacja komercyjna | Październik 2025</p>
+                    <p class="b2b-desc-text">Kompleksowy montaż kasetowych jednostek wewnętrznych Daikin SkyAir Alpha Series do intensywnej pracy w obiektach komercyjnych. Systemy zapewniają równomierny nawiew 360°, stabilną temperaturę oraz wysoki komfort dla klientów i personelu.</p>
+                    <ul class="b2b-benefits">
+                        <li>Równomierne rozprowadzenie powietrza na dużych powierzchniach</li>
+                        <li>Wysoka efektywność energetyczna – niskie koszty eksploatacji</li>
+                        <li>Niezawodność przy pracy 7 dni w tygodniu</li>
+                        <li>Technologia inwerterowa nowej generacji</li>
+                        <li>Łatwy dostęp serwisowy i długa eksploatacja</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- B2B 4: Duńska sieć handlowa Karczunkowska Warszawa (opis lewa, galeria prawa) -->
+            <div class="b2b-card reversed" data-slider="retail3">
+                <div class="b2b-slider">
+                    <video controls preload="metadata" poster="">
+                        <source src="REFERENCJE/B2B/DAIKIN_SkyAir Alpha Series_DUŃSKA SIEĆ SKLEPÓW_Bydgoszcz_web.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="b2b-desc">
+                    <span class="b2b-desc-badge">Daikin SkyAir Alpha / VRV</span>
+                    <h3>Duńska sieć handlowa – ul. Karczunkowska, Warszawa</h3>
+                    <p class="b2b-desc-meta">Kompleksowa realizacja HVAC | Warszawa</p>
+                    <p class="b2b-desc-text">Dla marketu duńskiej sieci handlowej przy ul. Karczunkowskiej w Warszawie wykonaliśmy kompleksową realizację systemów HVAC w standardzie sieciowym. Projekt obejmował zarówno część sprzedażową, jak i zaplecze techniczne obiektu. Zakres prac został dopasowany do intensywnej, całodziennej eksploatacji charakterystycznej dla obiektów retail.</p>
+                    <ul class="b2b-benefits">
+                        <li>Jednostki Daikin SkyAir Alpha Series oraz Daikin VRV na systemowych konstrukcjach</li>
+                        <li>Kasetowe jednostki sufitowe w sali sprzedaży – nawiew 360°</li>
+                        <li>Ścienne jednostki wewnętrzne w pomieszczeniach zaplecza</li>
+                        <li>Profesjonalna izolacja tras chłodniczych i estetyczne prowadzenie instalacji</li>
+                        <li>Zgodność z przepisami F-gas i wymaganiami BHP</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== PRIV SECTION ===== -->
+    <section class="section-priv" id="section-priv">
+        <div class="priv-grid">
+
+            <!-- PRIV 1: Żoliborz ME AP35 -->
+            <div class="priv-card" onclick="openPrivLightbox(0)">
+                <span class="priv-tag">Żoliborz, Warszawa</span>
+                <img src="REFERENCJE/PRIV/ME_AP35_Mieszkanie Żoliborz_JW.jpg" alt="Mieszkanie Żoliborz - Mitsubishi Electric AP35" loading="lazy">
+                <div class="priv-overlay">
+                    <h3>Mieszkanie Żoliborz</h3>
+                    <p>Mitsubishi Electric AP35 – ultracicha klimatyzacja, zaledwie 19 dB. Perfekcja komfortu i ciszy.</p>
+                    <p class="priv-overlay-hint">Kliknij, aby zobaczyć szczegóły</p>
+                </div>
+            </div>
+
+            <!-- PRIV 2: Powiśle ME Diamond -->
+            <div class="priv-card" onclick="openPrivLightbox(1)">
+                <span class="priv-tag">Powiśle, Warszawa</span>
+                <img src="REFERENCJE/PRIV/ME_DIAMOND_Warszawa Powisle_JW.jpg" alt="Warszawa Powiśle - Mitsubishi Electric Diamond" loading="lazy">
+                <div class="priv-overlay">
+                    <h3>Warszawa Powiśle</h3>
+                    <p>Mitsubishi Electric Diamond 6 kW – klimatyzacja klasy premium w prestiżowej lokalizacji.</p>
+                    <p class="priv-overlay-hint">Kliknij, aby zobaczyć szczegóły</p>
+                </div>
+            </div>
+
+            <!-- PRIV 3: Wola ME HR35 -->
+            <div class="priv-card" onclick="openPrivLightbox(2)">
+                <span class="priv-tag">Wola, Warszawa</span>
+                <img src="REFERENCJE/PRIV/ME_HR35_Warszawa Wola_JW.jpg" alt="Warszawa Wola - Mitsubishi Electric HR35" loading="lazy">
+                <div class="priv-overlay">
+                    <h3>Warszawa Wola</h3>
+                    <p>Mitsubishi Electric HR35 – świadoma alternatywa premium w budżetowej cenie. 50 m², Górczewska.</p>
+                    <p class="priv-overlay-hint">Kliknij, aby zobaczyć szczegóły</p>
+                </div>
+            </div>
+
+            <!-- PRIV 4: Otrębusy ME AP40 -->
+            <div class="priv-card" onclick="openPrivLightbox(3)">
+                <span class="priv-tag">Otrębusy</span>
+                <img src="REFERENCJE/PRIV/ME_AP_Dom jednorodzinny_Warszawa Otrębusy_JW.jpg" alt="Dom jednorodzinny Otrębusy - Mitsubishi Electric AP40" loading="lazy">
+                <div class="priv-overlay">
+                    <h3>Dom jednorodzinny Otrębusy</h3>
+                    <p>Mitsubishi Electric AP40 – 5 lat bezawaryjnej eksploatacji. Ultracicha klimatyzacja do sypialni.</p>
+                    <p class="priv-overlay-hint">Kliknij, aby zobaczyć szczegóły</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="realizacje-cta">
+        <div class="container">
+            <h2>Chcesz dołączyć do grona zadowolonych klientów?</h2>
+            <p>Umów się na bezpłatną konsultację i otrzymaj indywidualną wycenę.</p>
+            <a href="index.html#rezerwacja" class="btn">Umów bezpłatny audyt</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-przezroczyste.png" alt="ŚWIAT KLIMATYZACJI Logo" class="footer-logo-img" width="180" height="50" loading="lazy" decoding="async">
+                    <p>
+                        Tworzymy przestrzenie pełne komfortu i spokoju. Od 15 lat instalujemy systemy klimatyzacji premium dla wymagających klientów.
+                    </p>
+                    <p class="footer-company-info">
+                        ŚWIAT KLIMATYZACJI Sp. z o.o.<br>
+                        ul. Młynarska 42/115, 01-171 Warszawa<br>
+                        NIP: 5273012140
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#uslugi">Nasze usługi</a></li>
+                        <li><a href="index.html#korzysci">Korzyści</a></li>
+                        <li><a href="index.html#marki">Marki</a></li>
+                        <li><a href="index.html#proces">Jak pracujemy?</a></li>
+                        <li><a href="index.html#cennik">Cennik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="realizacje.html">Realizacje</a></li>
+                        <li><a href="abc-klimatyzacji.html">ABC Klimatyzacji</a></li>
+                        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+                        <li><a href="regulamin.html">Regulamin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ŚWIAT KLIMATYZACJI. Wszelkie prawa zastrzeżone. Made by <a href="https://hvaclider.pl" target="_blank" rel="noopener">hvaclider.pl</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX (PRIV) -->
+    <div class="lightbox" id="privLightbox">
+        <span class="lightbox-close" onclick="closePrivLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="lightbox-gallery" id="lightboxGallery">
+                <!-- Images populated by JS -->
+            </div>
+            <div class="lightbox-info" id="lightboxInfo">
+                <!-- Info populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== MOBILE MENU =====
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        }
+
+        // ===== HEADER SCROLL =====
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ===== TAB SWITCHING =====
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+
+            document.getElementById('section-b2b').classList.toggle('active', tab === 'b2b');
+            document.getElementById('section-priv').classList.toggle('active', tab === 'priv');
+
+            // Scroll to the active section
+            const target = document.getElementById('section-' + tab);
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
+
+        // ===== B2B SLIDERS =====
+        const b2bSliderState = {};
+
+        function initB2BSliders() {
+            document.querySelectorAll('[data-slider]').forEach(card => {
+                const id = card.dataset.slider;
+                b2bSliderState[id] = 0;
+            });
+        }
+
+        function slideB2B(id, dir) {
+            const card = document.querySelector(`[data-slider="${id}"]`);
+            const images = card.querySelectorAll('.b2b-slider img');
+            const dots = card.querySelectorAll('.slider-dot');
+            const total = images.length;
+
+            images[b2bSliderState[id]].classList.remove('active');
+            dots[b2bSliderState[id]].classList.remove('active');
+
+            b2bSliderState[id] = (b2bSliderState[id] + dir + total) % total;
+
+            images[b2bSliderState[id]].classList.add('active');
+            dots[b2bSliderState[id]].classList.add('active');
+        }
+
+        function goToSlideB2B(id, index) {
+            const card = document.querySelector(`[data-slider="${id}"]`);
+            const images = card.querySelectorAll('.b2b-slider img');
+            const dots = card.querySelectorAll('.slider-dot');
+
+            images[b2bSliderState[id]].classList.remove('active');
+            dots[b2bSliderState[id]].classList.remove('active');
+
+            b2bSliderState[id] = index;
+
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        initB2BSliders();
+
+        // ===== PRIV LIGHTBOX DATA =====
+        const privProjects = [
+            {
+                title: 'Mieszkanie Żoliborz',
+                meta: 'Mitsubishi Electric AP35 | Marzec 2022',
+                text: 'W tym mieszkaniu na Żoliborzu postawiliśmy na model Mitsubishi Electric AP35 – jednostkę stworzoną dla osób, które cenią ciszę, precyzję i niezawodność. To jedna z najcichszych klimatyzacji na rynku – zaledwie 19 dB, czyli poziom praktycznie niesłyszalny dla ludzkiego ucha. Dzięki wysokiej efektywności energetycznej klimatyzator szybko osiąga zadaną temperaturę, a następnie utrzymuje ją stabilnie, bez przeciągów i hałasu.',
+                benefits: [
+                    'Absolutna cisza – zaledwie 19 dB',
+                    'Komfort termiczny 24/7',
+                    'Nowoczesny, minimalistyczny wygląd',
+                    'Spokój na lata'
+                ],
+                images: [
+                    'REFERENCJE/PRIV/ME_AP35_Mieszkanie Żoliborz_JW.jpg',
+                    'REFERENCJE/PRIV/ME_AP35_Mieszkanie Żoliborz_JZ.jpg'
+                ]
+            },
+            {
+                title: 'Warszawa Powiśle',
+                meta: 'Mitsubishi Electric Diamond 6 kW | Sierpień 2021',
+                text: 'Realizacja dla wymagającego klienta premium w prestiżowej lokalizacji Warszawy. Zastosowano Mitsubishi Electric Diamond 6 kW – jednostkę z najwyższej półki, zaprojektowaną z myślą o maksymalnym komforcie, ciszy i niezawodności. Montaż w systemie dwóch etapów, w ścisłej współpracy z ekipą wykończeniową, pozwolił idealnie dopasować instalację do harmonogramu prac.',
+                benefits: [
+                    'Perfekcyjne dopasowanie do wnętrza – estetyka bez kompromisów',
+                    'Bardzo cicha praca – komfort nawet w nocy',
+                    'Wysoka efektywność energetyczna – realne oszczędności',
+                    'Bezawaryjność i trwałość klasy premium',
+                    'Pełna elastyczność wykonawcza'
+                ],
+                images: [
+                    'REFERENCJE/PRIV/ME_DIAMOND_Warszawa Powisle_JW.jpg',
+                    'REFERENCJE/PRIV/ME_DIAMOND_Warszawa Powisle_JW1.jpg'
+                ]
+            },
+            {
+                title: 'Warszawa Wola (Górczewska)',
+                meta: 'Mitsubishi Electric HR35 | Lipiec 2021',
+                text: 'Kompleksowy montaż klimatyzacji Mitsubishi Electric HR35 w mieszkaniu 50 m² na warszawskiej Woli. Instalacja o długości zaledwie 3 metrów – maksymalnie estetyczna, wydajna i bezproblemowa. To budżetowy model renomowanej japońskiej marki, świadoma alternatywa dla tanich urządzeń – tylko ok. 15% droższy, ale znacznie cichszy i bardziej energooszczędny.',
+                benefits: [
+                    'Tylko 15% droższy od najtańszych odpowiedników',
+                    'Znacznie cichszy – idealny do pracy zdalnej',
+                    'Wyraźnie bardziej energooszczędny',
+                    'Niezawodność potwierdzona latami eksploatacji',
+                    'Plastiki nie żółkną nawet po 5 latach'
+                ],
+                images: [
+                    'REFERENCJE/PRIV/ME_HR35_Warszawa Wola_JW.jpg',
+                    'REFERENCJE/PRIV/ME_HR35_Warszawa Wola_JZ.jpg'
+                ]
+            },
+            {
+                title: 'Dom jednorodzinny Otrębusy',
+                meta: 'Mitsubishi Electric AP40 | 5 lat bezawaryjnej eksploatacji',
+                text: 'W domu jednorodzinnym w Otrębusach zastosowano klimatyzację Mitsubishi Electric AP40 – model klasy premium, dobrany precyzyjnie do metrażu i kubatury pomieszczeń. Na życzenie inwestora nie zastosowano korytek instalacyjnych – wykonano precyzyjne wycięcie trasy w elewacji, instalacja została całkowicie ukryta. 5 lat ciągłej pracy, zero awarii, pełna satysfakcja użytkowników.',
+                benefits: [
+                    'Ultracicha praca – idealna do sypialni',
+                    'Bardzo wysoka wydajność chłodnicza',
+                    'Czysta elewacja – brak widocznych instalacji',
+                    '5 lat bezawaryjnej eksploatacji',
+                    'Sprzęt klasy „montujesz i zapominasz"'
+                ],
+                images: [
+                    'REFERENCJE/PRIV/ME_AP_Dom jednorodzinny_Warszawa Otrębusy_JW.jpg',
+                    'REFERENCJE/PRIV/ME_AP_Dom jednorodzinny_Warszawa Otrębusy_JW1.jpg',
+                    'REFERENCJE/PRIV/ME_AP_Dom jednorodzinny_Warszawa Otrębusy_JZ.jpg'
+                ]
+            }
+        ];
+
+        let privLightboxCurrent = 0;
+        let privLightboxSlide = 0;
+
+        function openPrivLightbox(projectIndex) {
+            privLightboxCurrent = projectIndex;
+            privLightboxSlide = 0;
+            const project = privProjects[projectIndex];
+
+            // Build gallery
+            const gallery = document.getElementById('lightboxGallery');
+            let galleryHTML = '';
+            project.images.forEach((src, i) => {
+                galleryHTML += `<img src="${src}" alt="${project.title}" class="${i === 0 ? 'active' : ''}" loading="lazy">`;
+            });
+
+            if (project.images.length > 1) {
+                galleryHTML += `<button class="slider-arrow prev" onclick="slidePrivLightbox(-1)">&larr;</button>`;
+                galleryHTML += `<button class="slider-arrow next" onclick="slidePrivLightbox(1)">&rarr;</button>`;
+                galleryHTML += '<div class="slider-dots">';
+                project.images.forEach((_, i) => {
+                    galleryHTML += `<button class="slider-dot ${i === 0 ? 'active' : ''}" onclick="goToPrivLightboxSlide(${i})"></button>`;
+                });
+                galleryHTML += '</div>';
+            }
+            gallery.innerHTML = galleryHTML;
+
+            // Build info
+            const info = document.getElementById('lightboxInfo');
+            let benefitsHTML = project.benefits.map(b => `<li>${b}</li>`).join('');
+            info.innerHTML = `
+                <h3>${project.title}</h3>
+                <p class="lightbox-info-meta">${project.meta}</p>
+                <p class="lightbox-info-text">${project.text}</p>
+                <ul class="lightbox-benefits">${benefitsHTML}</ul>
+            `;
+
+            document.getElementById('privLightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivLightbox() {
+            document.getElementById('privLightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function slidePrivLightbox(dir) {
+            const gallery = document.getElementById('lightboxGallery');
+            const images = gallery.querySelectorAll('img');
+            const dots = gallery.querySelectorAll('.slider-dot');
+            const total = images.length;
+
+            images[privLightboxSlide].classList.remove('active');
+            dots[privLightboxSlide].classList.remove('active');
+
+            privLightboxSlide = (privLightboxSlide + dir + total) % total;
+
+            images[privLightboxSlide].classList.add('active');
+            dots[privLightboxSlide].classList.add('active');
+        }
+
+        function goToPrivLightboxSlide(index) {
+            const gallery = document.getElementById('lightboxGallery');
+            const images = gallery.querySelectorAll('img');
+            const dots = gallery.querySelectorAll('.slider-dot');
+
+            images[privLightboxSlide].classList.remove('active');
+            dots[privLightboxSlide].classList.remove('active');
+
+            privLightboxSlide = index;
+
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        // Close lightbox on background click
+        document.getElementById('privLightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePrivLightbox();
+            }
+        });
+
+        // Close lightbox on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePrivLightbox();
+            }
+        });
+
+        // ===== COOKIE BANNER =====
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBanner').classList.add('hidden');
+        }
+        if (!localStorage.getItem('cookiesAccepted')) {
+            const cb = document.getElementById('cookieBanner');
+            if (cb) cb.classList.add('visible');
+        }
+    </script>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>Używamy cookies, aby zapewnić najlepsze doświadczenia. <a href="polityka-prywatnosci.html">Więcej</a></p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Niebieski element - lewa górna część A -->
+  <polygon points="38,8 52,8 75,92 60,92" fill="#5BB4E5"/>
+
+  <!-- Czerwony element - trójkąt dolny A -->
+  <polygon points="8,92 38,8 52,8 25,92" fill="#E31E24"/>
+
+  <!-- Ciemnoszary element - litera C -->
+  <path d="M48,8 L62,8 C80,8 92,28 92,50 C92,72 80,92 62,92 L48,92 L48,72 L58,72 C68,72 75,62 75,50 C75,38 68,28 58,28 L48,28 Z" fill="#3D3D3D"/>
+</svg>
